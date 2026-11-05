@@ -1,1 +1,317 @@
+ /* Membuat efek scroll menjadi halus saat menu diklik */
+ html {
+     scroll-behavior: smooth;
+ }
 
+ /* Mengubah warna latar belakang tab aktif */
+ .nav-pills .nav-link.active,
+ .nav-pills .show>.nav-link {
+     background-color: #4abdac !important;
+     color: #ffffff !important;
+ }
+
+ /* Mengubah warna saat tombol di-hover sebelum diklik */
+ .nav-pills .nav-link:hover {
+     color: #4abdac;
+ }
+
+ /* Mengubah warna teks tab navbar yang tidak aktif menjadi hitam */
+ .nav-pills .nav-link,
+ .navbar-nav .nav-link {
+     color: #000000 !important;
+ }
+
+ /* Mengubah warna saat tab di-hover agar tetap terlihat kontras */
+ .nav-pills .nav-link:hover,
+ .navbar-nav .nav-link:hover {
+     color: #4abdac !important;
+ }
+
+ /* Menghilangkan efek hover khusus pada tab aktif */
+ .nav-pills .nav-link.active:hover,
+ .navbar-nav .nav-link.active:hover {
+     background-color: #4abdac !important;
+     color: #ffffff !important;
+     cursor: default;
+ }
+
+ /* --- TOMBOL PERTAMA: Jelajahi Sekarang (btn-light) --- */
+ .btn-light:hover {
+     background-color: #4abdac !important;
+     color: #ffffff !important;
+     border-color: #4abdac !important;
+     transform: scale(1.05);
+     transition: transform 0.2s ease-in-out;
+ }
+
+ /* --- TOMBOL KEDUA: Belanja Produk --- */
+ .btn-outline-custom {
+     border: 2px solid #000000;
+     color: #000000;
+     transition: all 0.2s ease-in-out;
+ }
+
+ .btn-outline-custom:hover {
+     background-color: transparent !important;
+     color: #000000 !important;
+     border-color: #000000 !important;
+     transform: scale(1.05);
+ }
+
+ /* Mengatur agar menu berjajar ke bawah dan diberi jarak saat mode hamburger aktif */
+ @media (max-width: 991.98px) {
+
+     .navbar-collapse .navbar-nav,
+     .navbar-collapse .nav-pills {
+         flex-direction: column !important;
+         width: 100%;
+         margin-top: 15px;
+     }
+
+     .navbar-collapse .nav-item {
+         width: 100%;
+         text-align: center;
+         margin-bottom: 8px;
+     }
+ }
+
+ .product-img-wrapper img {
+     transition: transform 0.5s ease;
+ }
+
+ .product-img-wrapper:hover img {
+     transform: scale(1.05);
+ }
+
+ /* Efek Shape Blob untuk Gambar Produk */
+ .blob-img-wrapper {
+     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+     overflow: hidden;
+     box-shadow: 0 15px 35px rgba(74, 189, 172, 0.2);
+     transition: all 0.5s ease-in-out;
+     border: 4px solid #4abdac;
+     position: relative;
+ }
+
+ .blob-alt {
+     border-radius: 60% 40% 30% 70% / 50% 30% 70% 50%;
+ }
+
+ .blob-img-wrapper:hover {
+     border-radius: 50% 50% 50% 50%;
+     transform: translateY(-8px) scale(1.02);
+     box-shadow: 0 20px 45px rgba(74, 189, 172, 0.3);
+ }
+
+ .blob-img-wrapper img {
+     transition: transform 0.5s ease;
+ }
+
+ .blob-img-wrapper:hover img {
+     transform: scale(1.1);
+ }
+
+ /* Styling Kotak "Lihat Produk Lainnya" */
+ .more-box-clean {
+     background: #ffffff;
+     border: 2px dashed #4abdac !important;
+     transition: all 0.3s ease;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+ }
+
+ .more-box-clean:hover {
+     background: #4abdac;
+     transform: translateY(-5px);
+     border-color: #4abdac !important;
+     color: #ffffff !important;
+ }
+
+ .more-box-clean:hover h4,
+ .more-box-clean:hover p {
+     color: #ffffff !important;
+ }
+
+ .track-container {
+     position: relative;
+     max-width: 1000px;
+     margin: 0 auto;
+     padding: 20px 0 40px 0;
+ }
+
+ .svg-track {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+     pointer-events: none;
+ }
+
+ .track-item {
+     position: relative;
+     z-index: 2;
+     margin-bottom: 80px;
+     display: flex;
+     align-items: center;
+ }
+
+ .track-item:last-child {
+     margin-bottom: 20px;
+ }
+
+ /* Layout Berselang-seling Desktop */
+ @media (min-width: 768px) {
+     .track-item:nth-child(even) {
+         flex-direction: row-reverse;
+     }
+
+     .track-item .card-wrapper {
+         width: 45%;
+     }
+
+     .track-item .node-badge {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+     }
+ }
+
+ /* Layout Layar Kecil / HP */
+ @media (max-width: 767.98px) {
+     .track-item {
+         flex-direction: column;
+         text-align: center;
+     }
+
+     .track-item .card-wrapper {
+         width: 100%;
+         margin-top: 15px;
+     }
+
+     .svg-track {
+         display: none;
+     }
+
+     .track-container::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 50%;
+         width: 4px;
+         background: #4abdac;
+         transform: translateX(-50%);
+         z-index: 1;
+     }
+ }
+
+ /* Titik Node */
+ .node-badge {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background: #ffffff;
+     border: 4px solid #4abdac;
+     color: #4abdac;
+     font-weight: bold;
+     font-size: 1.4rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 8px 20px rgba(74, 189, 172, 0.3);
+     z-index: 3;
+     transition: all 0.3s ease;
+ }
+
+ .track-item:hover .node-badge {
+     background: #4abdac;
+     color: #ffffff;
+     transform: scale(1.15) translateX(-43%);
+ }
+
+ @media (max-width: 767.98px) {
+     .track-item:hover .node-badge {
+         transform: scale(1.15);
+     }
+ }
+
+ .track-card {
+     border: none;
+     border-radius: 20px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+     transition: all 0.3s ease;
+     background: #ffffff;
+ }
+
+ .track-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 35px rgba(74, 189, 172, 0.2);
+ }
+
+ .contact-icon-box {
+     width: 45px;
+     height: 45px;
+     background-color: #ffffff;
+     border: 1px solid rgba(74, 189, 172, 0.3);
+     border-radius: 12px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #4abdac;
+     font-size: 1.2rem;
+ }
+
+ /* Styling Tombol Sosial Media Keren */
+ .social-btn {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     padding: 8px 16px;
+     border-radius: 50px;
+     font-weight: 600;
+     font-size: 0.9rem;
+     transition: all 0.3s ease;
+     border: none;
+     color: #ffffff;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+ }
+
+ .social-btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+     color: #ffffff;
+ }
+
+ /* Warna Brand Sosmed */
+ .btn-whatsapp {
+     background-color: #25D366;
+ }
+
+ .btn-instagram {
+     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+ }
+
+ .btn-tiktok {
+     background-color: #010101;
+ }
+
+ .btn-youtube {
+     background-color: #FF0000;
+ }
+
+ .btn-facebook {
+     background-color: #1877F2;
+ }
+
+ /* Form Input Focus Effect */
+ .form-control:focus {
+     background-color: #ffffff !important;
+     border-color: #4abdac !important;
+     box-shadow: 0 0 0 0.25rem rgba(74, 189, 172, 0.15) !important;
+ }
+
+ /* tombol beli produk */
+ .btn-hover-scale:hover {
+      transform: scale(1.05); /* Mengubah ukuran tombol menjadi 105% saat di-hover */
+    }
