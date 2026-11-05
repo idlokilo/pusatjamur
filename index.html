@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="assets/img/icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>PusatJamur.com</title>
+</head>
+
+<body>
+  <!-- Brand Section / Navigasi -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-dark fw-bold" href="#">
+        <img src="assets/img/icon.png" alt="" width="30" class="d-inline-block align-text-top">
+        PusatJamur.com
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-pills ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#beranda" id="nav-beranda">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#jelajahi" id="nav-siklus">Jelajahi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#produk" id="nav-produk">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontak" id="nav-kontak">Kontak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang" id="nav-tentang">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. SECTION BERANDA (Gradasi dari Atas ke Bawah: #4abdac ke #ffffff) -->
+  <section id="beranda" class="container-fluid px-0 my-0">
+    <div class="p-5 p-lg-5 position-relative overflow-hidden"
+      style="background: linear-gradient(to bottom, #4abdac 0%, #ffffff 100%); width: 100%;">
+
+      <div class="container py-4">
+        <div class="row align-items-center gy-4">
+          <!-- Kolom Teks (Kiri) -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="display-5 fw-bold text-dark mb-3 lh-sm">
+              Dari Spora Hingga Panen, Temukan Semua tentang Jamur di Sini!
+            </h1>
+            <p class="text-secondary mb-4 fs-6" style="line-height: 1.7;">
+              Pusat informasi budidaya jamur sekaligus penyedia bibit berkualitas serta berbagai macam produk terkait
+              jamur untuk mendukung hobi maupun bisnis Anda.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+              <a href="#jelajahi" class="btn btn-light btn-lg px-4 shadow-sm fw-semibold rounded-pill text-dark"
+                style="background-color: #4abdac; border-color: #4abdac; color: #ffffff !important;">
+                Jelajahi Sekarang
+              </a>
+              <a href="#produk" class="btn btn-outline-custom btn-lg px-4 fw-semibold rounded-pill">
+                Belanja Produk
+              </a>
+            </div>
+          </div>
+
+          <!-- Kolom Gambar Blob (Kanan) -->
+          <div class="col-lg-6 d-flex justify-content-center align-items-center position-relative">
+            <div class="position-absolute opacity-25"
+              style="width: 300px; height: 300px; background-color: #4abdac; border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; filter: blur(50px); z-index: 1;">
+            </div>
+
+            <div class="blob-wrapper position-relative" style="z-index: 2;">
+              <img src="assets/img/hero.jfif" alt="Ilustrasi Hero Jamur" class="img-fluid shadow" style="width: 100%; max-width: 420px; height: 380px; object-fit: cover; 
+                        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; 
+                        border: 5px solid #ffffff;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. SECTION SIKLUS JAMUR -->
+
+  <section id="jelajahi" class="container my-5 py-5">
+    <!-- Judul Section & Kalimat Perjalanan Spora di Atas Konten -->
+    <div class="text-center mb-5">
+
+      <h2 class="fw-bold display-5 text-dark">Lintasan Siklus Budidaya Jamur</h2>
+      <p class="text-uppercase fw-bold text-muted small mb-1 tracking-wider"
+        style="letter-spacing: 2px; color: #4abdac !important;">
+        Perjalanan spora hingga menjadi produk di tangan Anda
+      </p>
+    </div>
+
+    <!-- Container Utama Lintasan -->
+    <main class="container">
+      <div class="track-container" id="trackContainer">
+
+        <!-- SVG Garis Meliuk (S-Curve Path) -->
+        <svg class="svg-track" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1000 1600">
+          <path d="M 500,50 
+                 C 850,150 850,300 500,340 
+                 C 150,380 150,580 500,620 
+                 C 850,660 850,860 500,900 
+                 C 150,940 150,1140 500,1180 
+                 C 850,1220 850,1420 500,1460" fill="none" stroke="#4abdac" stroke-width="5" stroke-dasharray="8 8" />
+        </svg>
+
+        <!-- TAHAP 1 -->
+        <div class="track-item">
+          <div class="card-wrapper">
+            <div class="card track-card p-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+
+                  <h4 class="fw-bold text-dark mb-0">1. Jamur Segar Induk</h4>
+                </div>
+                <span class="badge bg-secondary mb-2">Seleksi Eksplan</span>
+                <p class="text-secondary mb-0">
+                  Memilih buah jamur tiram segar unggulan yang sehat, tebal, dan steril untuk dijadikan sumber jaringan
+                  induk (eksplan).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="node-badge">1</div>
+        </div>
+
+        <!-- TAHAP 2 -->
+        <div class="track-item">
+          <div class="card-wrapper">
+            <div class="card track-card p-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+
+                  <h4 class="fw-bold text-dark mb-0">2. Bibit F0 (Murni)</h4>
+                </div>
+                <span class="badge text-white mb-2" style="background-color: #4abdac;">Kultur Laboratorium</span>
+                <p class="text-secondary mb-0">
+                  Isolasi jaringan dalam ruang steril (LAF) pada media agar PDA dalam cawan petri hingga tumbuh miselium
+                  murni seragam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="node-badge">2</div>
+        </div>
+
+        <!-- TAHAP 3 -->
+        <div class="track-item">
+          <div class="card-wrapper">
+            <div class="card track-card p-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+
+                  <h4 class="fw-bold text-dark mb-0">3. Bibit F1 (Turunan 1)</h4>
+                </div>
+                <span class="badge bg-info text-dark mb-2">Media Biji-bijian</span>
+                <p class="text-secondary mb-0">
+                  Inokulasi miselium F0 ke dalam media biji jagung/milet steril untuk memperbanyak kerapatan dan volume
+                  bibit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="node-badge">3</div>
+        </div>
+
+        <!-- TAHAP 4 -->
+        <div class="track-item">
+          <div class="card-wrapper">
+            <div class="card track-card p-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+
+                  <h4 class="fw-bold text-dark mb-0">4. Bibit F2 (Turunan 2)</h4>
+                </div>
+                <span class="badge bg-warning text-dark mb-2">Bibit Siap Sebar</span>
+                <p class="text-secondary mb-0">
+                  Perbanyakan lanjutan dari F1 ke media biji skala komersial. Bibit F2 ini yang nantinya disebar
+                  langsung ke baglog.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="node-badge">4</div>
+        </div>
+
+        <!-- TAHAP 5 -->
+        <div class="track-item">
+          <div class="card-wrapper">
+            <div class="card track-card p-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+
+                  <h4 class="fw-bold text-dark mb-0">5. Baglog Media Tanam</h4>
+                </div>
+                <span class="badge bg-success mb-2">Inkubasi Miselium</span>
+                <p class="text-secondary mb-0">
+                  Pencampuran serbuk gergaji, sterilisasi kukus, penanaman bibit F2, serta pembentukan miselium putih
+                  penuh di ruang inkubasi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="node-badge">5</div>
+        </div>
+
+        <!-- TAHAP 6 -->
+        <div class="track-item">
+          <div class="card-wrapper">
+            <div class="card track-card p-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+
+                  <h4 class="fw-bold text-dark mb-0">6. Panen Jamur Segar</h4>
+                </div>
+                <span class="badge bg-danger mb-2">Produk Akhir</span>
+                <p class="text-secondary mb-0">
+                  Baglog dirawat di kumbung dengan kelembapan 80–90%. <em>Pinhead</em> tumbuh mekar dan siap dipanen
+                  secara berkala.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="node-badge">6</div>
+        </div>
+
+      </div>
+    </main>
+  </section>
+
+  <!-- 3. SECTION PRODUK -->
+  <section id="produk" class="py-5 bg-white" style="min-height: 100vh; display: flex; align-items: center;">
+    <div class="container py-4">
+
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-5 text-dark">Produk Kami</h2>
+        <p class="lead text-secondary">Aneka produk seputar jamur segar dan olahan berkualitas.</p>
+      </div>
+
+      <div class="d-flex flex-column gap-5">
+
+        <!-- PRODUK 1 -->
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="blob-img-wrapper">
+              <img src="assets/img/produk jamur.jfif" class="img-fluid w-100 object-fit-cover" alt="Jamur Tiram Segar"
+                style="height: 380px;">
+            </div>
+          </div>
+          <div class="col-lg-6 ps-lg-4">
+            <span class="badge text-white mb-3 px-3 py-2 rounded-pill fw-semibold shadow-sm"
+              style="background-color: #4abdac;">Produk Terlaris</span>
+            <h3 class="fw-bold display-6 mb-3 text-dark">Jamur Tiram Segar (500g)</h3>
+            <p class="text-secondary mb-4 lead">Dipanen setiap pagi dalam kondisi terbaik. Memiliki tekstur tebal,
+              kenyal, dan bebas dari bahan kimia berbahaya. Sangat ideal untuk ditumis, digoreng crispy, atau
+              dijadikan campuran sup hangat.</p>
+            <div class="d-flex align-items-center gap-4">
+              <span class="fs-3 fw-bold" style="color: #4abdac;">Rp15.000</span>
+              <a href="https://shopee.co.id" target="_blank"
+                class="btn btn-lg px-4 rounded-pill fw-semibold text-white shadow-sm btn-hover-scale"
+                style="background-color: #4abdac; transition: transform 0.2s ease-in-out;">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUK 2 -->
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2">
+            <div class="blob-img-wrapper blob-alt">
+              <img src="assets/img/f1.jfif" class="img-fluid w-100 object-fit-cover" alt="Bibit Jamur F1"
+                style="height: 380px;">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1 pe-lg-4">
+            <span class="badge text-white mb-3 px-3 py-2 rounded-pill fw-semibold shadow-sm"
+              style="background-color: #4abdac;">Kualitas Premium</span>
+            <h3 class="fw-bold display-6 mb-3 text-dark">Bibit Jamur F1 Berkualitas</h3>
+            <p class="text-secondary mb-4 lead">Bibit murni F1 pilihan yang dikembangkan di laboratorium steril.
+              Memiliki tingkat adaptasi tinggi dan pertumbuhan miselium yang cepat, sangat cocok untuk pembudidaya
+              pemula
+              maupun profesional.</p>
+            <div class="d-flex align-items-center gap-4">
+              <span class="fs-3 fw-bold" style="color: #4abdac;">Rp35.000</span>
+              <a href="https://tokopedia.com" target="_blank"
+                class="btn btn-lg px-4 rounded-pill fw-semibold text-white shadow-sm btn-hover-scale"
+                style="background-color: #4abdac; transition: transform 0.2s ease-in-out;">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUK 3 -->
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="blob-img-wrapper">
+              <img src="assets/img/keripik.jfif" class="img-fluid w-100 object-fit-cover" alt="Kripik Jamur Crispy"
+                style="height: 380px;">
+            </div>
+          </div>
+          <div class="col-lg-6 ps-lg-4">
+            <span class="badge text-white mb-3 px-3 py-2 rounded-pill fw-semibold shadow-sm"
+              style="background-color: #4abdac;">Camilan Sehat</span>
+            <h3 class="fw-bold display-6 mb-3 text-dark">Kripik Jamur Crispy</h3>
+            <p class="text-secondary mb-4 lead">Camilan renyah dan gurih yang diolah dari jamur tiram segar pilihan.
+              Digoreng dengan minyak nabati berkualitas dan dibumbui rempah alami tanpa pengawet buatan.</p>
+            <div class="d-flex align-items-center gap-4">
+              <span class="fs-3 fw-bold" style="color: #4abdac;">Rp12.000</span>
+              <a href="https://shopee.co.id" target="_blank"
+                class="btn btn-lg px-4 rounded-pill fw-semibold text-white shadow-sm btn-hover-scale"
+                style="background-color: #4abdac; transition: transform 0.2s ease-in-out;">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KOTAK: Lihat Produk Lainnya -->
+      <div class="mt-5 pt-4 text-center">
+        <a href="https://shopee.co.id/toko-anda" target="_blank" class="text-decoration-none d-inline-block w-100"
+          style="max-width: 600px;">
+          <div class="p-4 rounded-4 more-box-clean">
+            <h4 class="fw-bold mb-1 text-dark">Lihat Produk Lainnya <i class="bi bi-arrow-right ms-2"></i></h4>
+            <p class="text-secondary mb-0 small">Temukan berbagai varian jamur segar, baglog, dan kaldu alami di
+              e-commerce resmi kami.</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. SECTION KONTAK -->
+  <!-- 4. SECTION KONTAK -->
+  <section id="kontak" class="container my-5 py-5">
+
+    <!-- Judul Section & Sub-Judul -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-5 text-dark">Kontak</h2>
+
+    </div>
+
+    <div class="row g-5 align-items-center">
+
+      <!-- Kolom Kiri: Form Kirim Pesan -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4 bg-white">
+          <h3 class="fw-bold mb-2 text-dark">Kirim Pesan</h3>
+          <p class="text-secondary mb-4 small">Punya pertanyaan seputar budidaya atau pemesanan? Sampaikan pesan Anda
+            melalui form di bawah ini.</p>
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label text-secondary fw-semibold small">Nama Lengkap</label>
+              <input type="text" class="form-control rounded-pill px-3 py-2 border-light bg-light"
+                placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-secondary fw-semibold small">Nomor WhatsApp / Email</label>
+              <input type="text" class="form-control rounded-pill px-3 py-2 border-light bg-light"
+                placeholder="Contoh: 0812xxxx atau email@domain.com" required>
+            </div>
+            <div class="mb-4">
+              <label class="form-label text-secondary fw-semibold small">Pesan Anda</label>
+              <textarea class="form-control rounded-4 px-3 py-3 border-light bg-light" rows="4"
+                placeholder="Tuliskan pertanyaan atau pesanan Anda di sini..." required></textarea>
+            </div>
+            <button type="submit" class="btn text-white fw-semibold w-100 py-3 rounded-pill shadow-sm"
+              style="background-color: #4abdac; transition: all 0.3s ease;">
+              Kirim Pesan Sekarang <i class="bi bi-send-fill ms-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Informasi Kontak & Sosial Media Populer di Indonesia -->
+      <div class="col-lg-6 ps-lg-5">
+        <span class="badge text-dark mb-3 px-3 py-2 rounded-pill fw-semibold shadow-sm"
+          style="background-color: rgba(74, 189, 172, 0.15); color: #4abdac !important;">Hubungi Kami</span>
+        <h3 class="fw-bold display-6 mb-3 text-dark">Mari Terhubung dengan PusatJamur.com</h3>
+        <p class="text-secondary mb-4 lead fs-6">
+          Kami siap melayani konsultasi seputar dunia jamur, pembelian bibit F0-F2, baglog siap panen, hingga jamur
+          tiram segar kualitas terbaik.
+        </p>
+
+        <!-- Detail Kontak Langsung -->
+        <div class="d-flex flex-column gap-3 mb-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="contact-icon-box shadow-sm">
+              <img src="assets/img/map.avif" alt="Lokasi" class="img-fluid rounded-circle"
+                style="width: 40px; height: 40px; object-fit: cover;">
+            </div>
+            <div>
+              <span class="text-muted small d-block">Alamat Utama</span>
+              <strong class="text-dark">Tulungagung, Jawa Timur</strong>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="contact-icon-box shadow-sm">
+              <img src="assets/img/wa.avif" alt="WhatsApp" class="img-fluid rounded-circle"
+                style="width: 40px; height: 40px; object-fit: cover;">
+            </div>
+            <div>
+              <span class="text-muted small d-block">WhatsApp (Fast Response)</span>
+              <strong class="text-dark">0857-8430-4534</strong>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="contact-icon-box shadow-sm">
+              <img src="assets/img/mail.png" alt="email" class="img-fluid rounded-circle"
+                style="width: 40px; height: 40px; object-fit: cover;">
+            </div>
+            <div>
+              <span class="text-muted small d-block">Email Resmi</span>
+              <strong class="text-dark">info@pusatjamur.com</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media Buttons (Lazim di Indonesia) -->
+        <div>
+          <h6 class="fw-bold text-dark mb-3">Temukan Kami di Media Sosial:</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6285784304534" target="_blank" class="btn social-btn btn-whatsapp" title="WhatsApp">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" class="btn social-btn btn-instagram" title="Instagram">
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" class="btn social-btn btn-tiktok" title="TikTok">
+              <i class="bi bi-tiktok"></i> TikTok
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" class="btn social-btn btn-youtube" title="YouTube">
+              <i class="bi bi-youtube"></i> YouTube
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com" target="_blank" class="btn social-btn btn-facebook" title="Facebook">
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. SECTION TENTANG KAMI -->
+  <section id="tentang" class="container my-5 py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <!-- Card Utama Tentang Kami -->
+        <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white position-relative overflow-hidden">
+
+          <!-- Aksen Dekoratif Background -->
+          <div class="position-absolute top-0 end-0 bg-light opacity-50 rounded-circle"
+            style="width: 250px; height: 250px; transform: translate(30%, -30%); z-index: 0;"></div>
+
+          <div class="position-relative" style="z-index: 1;">
+            <!-- Judul Section -->
+            <div class="text-center mb-4">
+
+              <h2 class="fw-bold display-6 text-dark">Tentang PusatJamur.com</h2>
+              <p class="lead text-secondary fs-6">Berawal dari hobi rumahan, kini kami berkembang menjadi penyedia
+                baglog dan jamur segar terpercaya.</p>
+            </div>
+
+            <!-- Deskripsi & Visi -->
+            <div class="row justify-content-center mt-4">
+              <div class="col-md-10 text-center">
+                <p class="text-secondary lh-lg mb-4">
+                  Kami berkomitmen untuk terus mengedukasi masyarakat mengenai pentingnya pangan organik dan membagikan
+                  cara budidaya jamur yang mudah dipraktikkan, bahkan di lahan yang terbatas. Dari pemilihan bibit murni
+                  hingga proses panen berkualitas tinggi, setiap tahap dikerjakan dengan standar sterilitas dan
+                  ketelitian yang terjaga.
+                </p>
+
+                <div class="p-3 rounded-3 bg-light border-start border-4 mb-4 text-start d-inline-block w-100"
+                  style="border-color: #4abdac !important;">
+                  <h5 class="fw-bold mb-1" style="color: #4abdac;">Visi Kami</h5>
+                  <p class="text-secondary mb-0 small">Menjadi pusat edukasi dan produksi jamur tiram terbesar yang
+                    ramah lingkungan dan berkelanjutan di Indonesia.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kotak Dukungan Resmi (Powered By NWM ID) -->
+            <hr class="my-4 text-muted opacity-25">
+            <div class="text-center bg-light p-4 rounded-4 shadow-sm border border-light">
+              <p class="text-uppercase tracking-wider small fw-bold text-muted mb-1" style="letter-spacing: 1.5px;">
+                Didukung Penuh Oleh</p>
+              <h4 class="fw-bold text-dark mb-2">Nguberwelasmu Mushroom (NWM ID)</h4>
+              <p class="text-secondary small mb-0 px-md-5">
+                Website dan seluruh ekosistem produksi ini didukung sepenuhnya oleh <strong>NWM ID</strong>, penyedia
+                teknologi kultur jaringan, riset mikologi modern, serta jaringan mitra budidaya jamur profesional
+                terkemuka.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-dark pt-5 pb-4 mt-5 border-top">
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #4abdac;">PusatJamur.com</h5>
+          <p class="text-secondary">
+            Pusat informasi budidaya jamur terpercaya serta penyedia produk olahan dan bibit berkualitas tinggi.
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold text-dark">Menu</h6>
+          <p><a href="#beranda" class="text-secondary text-decoration-none">Beranda</a></p>
+          <p><a href="#jelajahi" class="text-secondary text-decoration-none">Jelajahi</a></p>
+          <p><a href="#produk" class="text-secondary text-decoration-none">Produk</a></p>
+          <p><a href="#kontak" class="text-secondary text-decoration-none">Kontak</a></p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold text-dark">Kontak</h6>
+          <p class="text-secondary"> Tulungagung, Jawa Timur</p>
+          <p class="text-secondary"> info@pusatjamur.com</p>
+          <p class="text-secondary"> +62 857 8430 4534</p>
+        </div>
+      </div>
+
+      <hr class="mb-4">
+
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="text-secondary">© 2026 Hak Cipta Dilindungi oleh:
+            <a href="#" class="text-decoration-none">
+              <strong style="color: #4abdac;">PusatJamur.com</strong>
+            </a>
+          </p>
+        </div>
+
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-end">
+            <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button">FB</a>
+            <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button">X</a>
+            <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button">IG</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JavaScript Active Scroll -->
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
